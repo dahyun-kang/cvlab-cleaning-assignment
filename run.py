@@ -3,7 +3,7 @@ import random
 import argparse
 import unicodedata
 
-def fill_str(input_s="", max_size=50, fill_char=" "):
+def fill_str(input_s="", max_size=70, fill_char=" "):
     # https://frhyme.github.io/python-libs/print_kor_and_en_full_half_width/
     l = 0
     for c in input_s:
@@ -35,8 +35,8 @@ class CVLabCleaningAssignment:
         regions["오른쪽 입구쪽 복도, 신발장, 옷장"] = 2
         regions["냉장고 정리 (유통기한 지난 것들, 이름 없는 것들)"] = 2
         regions["전자레인지 닦기, 소파 먼지 털고 오기"] = 2
-        regions["대청소 이후 청소기 잔여물 제거/냉장고 옆 박스 정리"] = 2
-        regions["파쇄기 비우기/복합기 옆 종이 버리기"] = 2
+        regions["파쇄기 비우기/복합기 옆 종이 버리기, 대청소 이후 청소기 잔여물 제거"] = 2
+        regions["왼/오른쪽 창가 정리, 창가쪽 복도 닦기"] = 2
         return regions
 
     def assign(self):
