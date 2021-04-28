@@ -75,7 +75,7 @@ if __name__ == '__main__':
     parser.add_argument('-date', type=int, help='Random seed in a form of YYYYMM', default=202103)
     args = parser.parse_args()
 
-    ''' set a random seed as the integer YYYYMM '''
+    ''' set a random seed as an integer YYYYMM '''
     random.seed(args.date)
 
     CVLabCleaningAssignment().assign()
