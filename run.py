@@ -2,8 +2,10 @@
 import random
 import argparse
 import unicodedata
+from termcolor import colored
 
-def fill_str(input_s="", max_size=70, fill_char=" "):
+
+def fill_str(input_s="", max_size=50, fill_char=" "):
     # https://frhyme.github.io/python-libs/print_kor_and_en_full_half_width/
     l = 0
     for c in input_s:
@@ -39,7 +41,7 @@ class CVLabCleaningAssignment:
         area["오른쪽 입구쪽 복도, 신발장, 옷장"] = 2
         area["냉장고 정리 (유통기한 지난 것들, 이름 없는 것들)"] = 2
         area["전자레인지 닦기, 소파 먼지 털고 오기"] = 2
-        area["파쇄기 비우기/복합기 옆 종이 버리기, 대청소 이후 청소기 잔여물 제거"] = 2
+        area["파쇄기 비우기, 대청소 이후 청소기 잔여물 제거"] = 2
         area["왼/오른쪽 창가 정리, 창가쪽 복도 닦기"] = 2
         return area
 
@@ -65,9 +67,10 @@ class CVLabCleaningAssignment:
         self.print(assignments)
 
     def print(self, assignments):
-        print(f"\n{args.date} 차 공용 구역 청소 당번입니다.\n")
+        print(f"\n {args.date} 차 공용 구역 청소 당번입니다.\n")
         for k, v in assignments:
-            print(f'{fill_str(k)} | {v}')
+            print(f' {fill_str(k)}')
+            print(f'   {colored(str(v), "yellow")}')
 
 
 if __name__ == '__main__':
