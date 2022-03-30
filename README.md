@@ -17,4 +17,4 @@
     python run.py -date 202103
 
 ## Output
-![Example](./example.png)
+![Example](./example.jpg)
